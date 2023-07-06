@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Project one",
+        "description": "testing this",
+        "img": "https://source.unsplash.com/random?wallpapers",
+        "github": "https://github.com/reidmadock"
+    },
+    {
+        "name": "Project two",
+        "description": "testing this a second time",
+        "img": "https://source.unsplash.com/random?wallpapers",
+        "github": "https://github.com/reidmadock"
+    },
+    {
+        "name": "Project three",
+        "description": "testing this a second time",
+        "img": "https://source.unsplash.com/random?wallpapers",
+        "github": "https://github.com/reidmadock"
+    }
+]
