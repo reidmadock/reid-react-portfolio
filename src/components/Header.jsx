@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navigation from './Navigation';
 import Home from './Home';
 
@@ -7,9 +7,13 @@ export default function Header() {
 
   const handleClick = (view) => {
       setViewing(view);
-      console.log(view);
+      // console.log(view);
       // event.target.className = event.target.className + ' clicked'
   }
+
+  useEffect(() => {
+    console.log('We are viewing:', viewing.type.name);
+  })
 
   return (
     <>
