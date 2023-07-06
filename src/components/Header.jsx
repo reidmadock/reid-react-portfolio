@@ -1,21 +1,29 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navigation from './Navigation';
 import Home from './Home';
-import Portfolio from './Portfolio';
-import Resume from './Resume';
 
 export default function Header() {
   const [viewing, setViewing] = useState(<Home />);
 
   const handleClick = (view) => {
       setViewing(view);
+      // console.log(view);
+      // event.target.className = event.target.className + ' clicked'
   }
+
+  useEffect(() => {
+    console.log('We are viewing:', viewing.type.name);
+  })
 
   return (
     <>
-      <h3>Reid Madock</h3>
-      <Navigation handleClick={handleClick}/>
+      <div className='Header'>
+        <h1>Reid Madock</h1>
+        <Navigation handleClick={handleClick}/>
+      </div>
+      <div className='content center'>
       {viewing}
+      </div>
     </>
   );
 }

@@ -1,3 +1,32 @@
+:root {
+  --primary-cobalt: hsl(234, 85%, 45%);
+  --primary-red: hsl(0,100%,67%);
+
+  --gradient-munsell: hsl(193, 41%, 45%);
+  --gradient-medslateblue: hsla(249, 69%, 64%);
+  --gradient-persian: hsla(241, 72%, 46%, 0);
+
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-mintgreen: hsl(166, 73%, 88%);
+  --neutral-darkgrayblue: hsl(208, 91%, 9%);
+
+  --accent-grayblue: hsla(224, 30%, 50%, 1);
+  --accent-brightpink: hsl(356, 72%, 66%);
+}
+
+* {
+  resize: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--neutral-darkgrayblue);
+  color: var(--neutral-mintgreen);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 h1,
 p {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
@@ -7,4 +36,39 @@ p {
 li {
   list-style: none;
   font-size: 32px;
+  display: inline;
+  margin: 8px;
+  padding: 8px;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.center h1 {
+  text-align: center;
+}
+
+.Header {
+  text-align: center;
+  background:  linear-gradient( var(--gradient-medslateblue), var(--neutral-darkgrayblue) 70%);
+}
+
+.Header h1 {
+  font-size: 4rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav {
+}
+
+.nav-active {
+  color: var(--accent-brightpink);
+}
+
+.clicked {
+  color: grey;
 }
