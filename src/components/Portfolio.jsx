@@ -11,11 +11,8 @@ export default function Portfolio() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <main>
-        <Typography gutterBottom variant="h5" component="h2">
-          Click a project to view it on GitHub 
-        </Typography>
         {/* Hero unit */}
-        <Container sx={{ py: 8 }} maxWidth="md">
+        <Container sx={{ py: 8 }} maxWidth="lg">
           {/* End hero unit */}
           <Grid container spacing={4}>
             {/* Bring in projects from project component */}

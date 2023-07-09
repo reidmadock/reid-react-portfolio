@@ -5,6 +5,7 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import Paper from '@mui/material/Paper';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const ariaLabel = { 'aria-label': 'description' };
@@ -44,7 +45,7 @@ export default function SignUp() {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Container component="main" maxWidth="xs" sx={{ backgroundColor: '#7765E3', borderRadius: '16px'}}>
+      <Container component="main" maxWidth="xs" >
         <Box
           sx={{
             marginTop: 8,
@@ -53,6 +54,7 @@ export default function SignUp() {
             alignItems: 'center',
           }}
         >
+          <Paper elevation={2} sx={{ backgroundColor: '#93b5c6', borderRadius: '16px', padding: '16px'}}>
           <Typography component="h1" variant="h5">
             Contact
           </Typography>
@@ -99,6 +101,7 @@ export default function SignUp() {
               Contact
             </Button>
           </Box>
+          </Paper>
         </Box>
       </Container>
     </ThemeProvider>

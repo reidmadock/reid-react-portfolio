@@ -53,7 +53,6 @@ li {
 
 .Header {
   text-align: center;
-  background:  linear-gradient( var(--gradient-medslateblue), var(--neutral-darkgrayblue) 70%);
 }
 
 .Header h1 {

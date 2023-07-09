@@ -20,7 +20,7 @@ export default function Portfolio() {
       <Grid item key={card} xs={12} sm={6} md={4}>
         <CardActionArea href={projects[index].github} target='_blank'>
           <Card
-            sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+            sx={{ height: '100%', display: 'flex', flexDirection: 'column'}}
           >
             <CardContent sx={{ flexGrow: 1 }}>
               <Typography variant="h5" component="h2">

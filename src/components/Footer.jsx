@@ -23,18 +23,25 @@ export default function Footer() {
   return (
     <ThemeProvider theme={defaultTheme}>
       {/* Footer */}
-      <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
-        <Typography variant="h6" align="center" gutterBottom color='#000000'>
-          Footer
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          color="text.secondary"
-          component="p"
+      <Box 
+        sx={
+          { bgcolor: 'background.paper', p: 3, position: 'fixed',
+          bottom: 0,
+          width: '100%' }
+        } 
+        component={"footer"}
         >
-          Something here to give the footer a purpose!
-        </Typography>
+          {/* <Typography variant="h6" align="center" gutterBottom color='#000000'>
+            Footer
+          </Typography> */}
+          <Typography
+            variant="subtitle1"
+            align="center"
+            color="text.secondary"
+            component="p"
+          >
+            Not really sure what to put here
+          </Typography>
         <Copyright />
       </Box>
       {/* End footer */}

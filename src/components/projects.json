@@ -1,20 +1,38 @@
 [
     {
-        "name": "Project one",
+        "name": "Patch Tracker",
         "description": "testing this",
         "img": "https://source.unsplash.com/random?wallpapers",
-        "github": "https://github.com/reidmadock"
+        "github": "https://github.com/DefaultModeNetwork/Patch-Tracker"
     },
     {
-        "name": "Project two",
-        "description": "testing this a second time",
-        "img": "https://source.unsplash.com/random?wallpapers",
-        "github": "https://github.com/reidmadock"
+        "name": "Resume-Pocalypse",
+        "description": "testing this",
+        "img": "https://raw.githubusercontent.com/wasteland-career-solutions/resume-pocalypse/main/public/assets/images/ResumePocalypseScreenshot.jpg",
+        "github": "https://github.com/wasteland-career-solutions/resume-pocalypse"
     },
     {
-        "name": "Project three",
+        "name": "Password Generator",
         "description": "testing this a second time",
-        "img": "https://source.unsplash.com/random?wallpapers",
-        "github": "https://github.com/reidmadock"
+        "img": "https://raw.githubusercontent.com/reidmadock/PasswordGenerator/main/assets/generatedpassword.png",
+        "github": "https://github.com/reidmadock/PasswordGenerator"
+    },
+    {
+        "name": "Tech Blog",
+        "description": "Express, Sequelize, Handlebars",
+        "img": "https://raw.githubusercontent.com/reidmadock/tech-blog/main/public/assets/blogscreenshot.png",
+        "github": "https://github.com/reidmadock/tech-blog"
+    },
+    {
+        "name": "Social Network Backend",
+        "description": "Mangoose + Express",
+        "img": "https://raw.githubusercontent.com/reidmadock/oldschool-social/main/assets/postmanscrshot.png",
+        "github": "https://github.com/reidmadock/oldschool-social"
+    },
+    {
+        "name": "Forecast Dashboard",
+        "description": "testing this a second time",
+        "img": "https://raw.githubusercontent.com/reidmadock/Weather-Forecast-Dash/main/assets/images/dashboardscreenshot.png",
+        "github": "https://github.com/reidmadock/Weather-Forecast-Dash"
     }
 ]
