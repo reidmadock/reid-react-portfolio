@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Navigation from './Navigation';
-import Home from './Home';
 import { Typography } from '@mui/material';
 
 export default function Header() {
