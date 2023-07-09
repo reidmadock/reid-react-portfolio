@@ -1,44 +1,109 @@
-import React, { useState } from 'react';
+import * as React from 'react';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import Paper from '@mui/material/Paper';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-export default function Contact() {
-  const [person, setPerson] = useState({ username: '', email: '', message: '' });
+const ariaLabel = { 'aria-label': 'description' };
 
-  function handleInput(name, value) {
-    // console.log('event target:', event.target.value);
-    setPerson({ ...person, [name]: value });
-  }
+const theme = createTheme({
+  components: {
+    MuiBox: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#f5f5f5',
+          padding: '16px',
+          borderRadius: '4px',
+        },
+      },
+    },
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          marginBottom: '8px',
+        },
+      },
+    },
+  },
+});
 
-  function handleSubmit() {
-    setPerson({ username: '', email: '', message: '' });
-  }
+const defaultTheme = createTheme();
+
+export default function SignUp() {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    console.log({
+      email: data.get('email'),
+      password: data.get('password'),
+    });
+  };
 
   return (
-    <>
-      <h1>We are on my Contact</h1>
-      <form>
-        <input
-          type="text"
-          placeholder="Full name"
-          value={person.username}
-          onChange={(event) => handleInput('username', event.target.value)}
-        />
-        <br />
-        <input
-          type="text"
-          placeholder="Email"
-          value={person.email}
-          onChange={(event) => handleInput('email', event.target.value)}
-        />
-        <br />
-        <input
-          type="text"
-          placeholder="Message"
-          value={person.message}
-          onChange={(event) => handleInput('message', event.target.value)}
-        />
-        <br />
-        <input type="button" value="Contact" onClick={handleSubmit} />
-      </form>
-    </>
+    <ThemeProvider theme={defaultTheme}>
+      <Container component="main" maxWidth="xs" >
+        <Box
+          sx={{
+            marginTop: 8,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
+          <Paper elevation={2} sx={{ backgroundColor: '#93b5c6', borderRadius: '16px', padding: '16px'}}>
+          <Typography component="h1" variant="h5">
+            Contact
+          </Typography>
+          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+            <Grid container spacing={2}>
+              <Grid item xs={12}>
+                <TextField
+                  fullWidth
+                  id="name"
+                  label="Name"
+                  name="name"
+                  autoComplete="name"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  id="email"
+                  label="Email Address"
+                  name="email"
+                  autoComplete="email"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  name="message"
+                  label="Message"
+                  id="message"
+                  autoComplete='off'
+                  multiline
+                  rows={5}
+                />
+              </Grid>
+            </Grid>
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
+            >
+              Contact
+            </Button>
+          </Box>
+          </Paper>
+        </Box>
+      </Container>
+    </ThemeProvider>
   );
 }

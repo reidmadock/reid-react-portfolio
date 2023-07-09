@@ -1,9 +1,10 @@
 import React from 'react';
+import AboutMe from './AboutMe';
 
 export default function Home() {
   return (
     <>
-      <h1>We are in the home</h1>
+       <AboutMe />
     </>
   );
 }
